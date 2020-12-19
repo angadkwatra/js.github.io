@@ -6,7 +6,6 @@ let c = canvas.getContext("2d");
 
 // c.fillRect(100, 100, 100, 100);
 
-
 //TRianlge co ordinates//
 c.beginPath();
 c.arc(100, 100, 4, 0, 2 * Math.PI);
@@ -34,11 +33,6 @@ c.fill();
 // c.fillStyle = "black";
 // c.fill();
 
-// for (let i = 0; i <= 10; i++) {
-    // function vertex() {
-    //     let rand = Math.floor(Math.random() * 3 + 1);
-    //     console.log(rand);
-    // }
 
 //     c.beginPath();
 //     c.arc(300 + 20i,200+30i, 4, 0, 2 * Math.PI);
@@ -57,7 +51,7 @@ c.lineTo(600, 100);
 c.lineTo(100, 100);
 c.strokeStyle = "rgba(45,67,89,0.8)";
 c.stroke();
-    let x = Math.floor(Math.random() * 500 + 100);
+let x = Math.floor(Math.random() * 500 + 100);
 let y = Math.floor(Math.random() * 400 + 100);
 
 //   c.beginPath();
@@ -66,40 +60,37 @@ let y = Math.floor(Math.random() * 400 + 100);
 //   c.fillStyle = "black";
 //   c.fill();
 
+for (let i = 1; i <= 10; i++) {
+    function vertex() {
+    let rand = Math.floor(Math.random() * 3 + 1);
+    
+}
+   if ( rand==1)
+    x = (x + 100) / 2;
+    y = (y + 100) / 2;
 
-for (let i = 1; i =< 3; i++) {
+    c.beginPath();
+    c.arc(x, y, 4, 0, 2 * Math.PI);
+    c.stroke();
+    c.fillStyle = "black";
+    c.fill();
+  } else if (rand== 2) {
+    x = (x + 600) / 2;
+    y = (y + 100) / 2;
 
-if (i === 1) {
+    c.beginPath();
+    c.arc(x, y, 4, 0, 2 * Math.PI);
+    c.stroke();
+    c.fillStyle = "black";
+    c.fill();
+  } else {
+    x = (x + 100) / 2;
+    y = (y + 500) / 2;
 
-        x = (x + 100) / 2;
-        y = (y + 100) / 2;
-
-        c.beginPath();
-        c.arc(x, y, 4, 0, 2 * Math.PI);
-        c.stroke();
-        c.fillStyle = "black";
-        c.fill();
-
-    }
-    else-if (i=== 2) {
-        x = (x + 600) / 2;
-        y = (y + 100) / 2;
-
-        c.beginPath();
-        c.arc(x, y, 4, 0, 2 * Math.PI);
-        c.stroke();
-        c.fillStyle = "black";
-        c.fill();
-    }
-
-    else (i=== 3) {
-        x = (x + 100) / 2;
-        y = (y + 500) / 2;
-
-        c.beginPath();
-        c.arc(x, y, 4, 0, 2 * Math.PI);
-        c.stroke();
-        c.fillStyle = "black";
-        c.fill();
-    }
+    c.beginPath();
+    c.arc(x, y, 4, 0, 2 * Math.PI);
+    c.stroke();
+    c.fillStyle = "black";
+    c.fill();
+  }
 }
